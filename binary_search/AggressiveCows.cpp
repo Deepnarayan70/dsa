@@ -105,8 +105,8 @@ int main(){
     //     }
     // }
 
+
     //#binary search approach
-    
     cout<< agg_cows(arr,n,k);
 }
  

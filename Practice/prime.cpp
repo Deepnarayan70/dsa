@@ -26,7 +26,7 @@ void printPrimePairs(int n){
 ///  //////////
  
 void sieve(int n){
-        //create an array n+1 for prime no.s and non primes
+    //create an array n+1 for prime no.s and non primes
     //O(sqrt(n))
 
     vector<bool> arr(n+1,true);
