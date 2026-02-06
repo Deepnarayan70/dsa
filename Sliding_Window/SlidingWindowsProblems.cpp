@@ -158,6 +158,52 @@
 //     }
 // };
 
+
+
+
+//Leetcode problem 930
+// 930. Binary Subarrays With Sum
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Given a binary array nums and an integer goal, return the number of non-empty subarrays with a sum goal.
+// A subarray is a contiguous part of the array.
+// Example 1:
+// Input: nums = [1,0,1,0,1], goal = 2
+// Output: 4
+// Explanation: The 4 subarrays are bolded and underlined below:
+// [1,0,1,0,1]
+// [1,0,1,0,1]
+// [1,0,1,0,1]
+// [1,0,1,0,1]
+// Example 2:
+// Input: nums = [0,0,0,0,0], goal = 0
+// Output: 15
+// class Solution {
+// public:
+//     int countsum(vector<int>nums,int goal){
+//         int l=0,sum=0,count=0;
+//         if(goal<0) return 0;
+//         for(int r=0;r<nums.size();r++){
+//             sum+=nums[r];
+//             while(sum>goal){
+//                 sum = sum- nums[l];
+//                 l++;
+//             }
+//             count+= r-l+1;
+//         }
+//         return count;
+//     }
+//     int numSubarraysWithSum(vector<int>& nums, int goal) {
+//         return countsum(nums,goal)-countsum(nums,goal-1);
+//     }
+// };
+
+
+
+
 //Leetcode problem 239
 
 
