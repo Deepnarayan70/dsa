@@ -1,5 +1,8 @@
 //size();, front();, back();, empty(); , pudh();, pop;();, pop_back();
 
+//Leetcode problem->2 done
+
+
 #include <iostream>
 using namespace std;
 
@@ -152,19 +155,4 @@ using namespace std;
 //     return 0;
 // }
 
-
-
-class Node{
-    int data;
-    Node* next;
-    Node* prev;
-
-    Node(int data){
-        this->data=data;
-        next=prev=NULL;
-    }
-}
-class dqueue{
-
-
-}
+ 

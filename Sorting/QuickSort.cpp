@@ -15,6 +15,9 @@ int QuickSort(vector<int> &arr,int l,int r){
     swap(arr[x+1],arr[r]);
     return x+1;
 }
+void sort(vector<int> &arr,int n){
+    
+}
 int main(){
     int n;
     cin>>n;
@@ -23,7 +26,7 @@ int main(){
         cin>>arr[i];
     }
     int l=0,r=n-1;
-    QuickSort(arr,l,r);
+    sort(arr,n);
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
