@@ -263,3 +263,119 @@ using namespace std;
 //         return head;
 //     }
 // };
+
+
+//Leetcode 24
+// 24. Swap Nodes in Pairs
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
+// Example 1:
+// Input: head = [1,2,3,4]
+// Output: [2,1,4,3]
+// Explanation:
+// Example 2:
+// Input: head = []
+// Output: []
+// Example 3:
+// Input: head = [1]
+// Output: [1]
+// Example 4:
+// Input: head = [1,2,3]
+// Output: [2,1,3]
+// /**
+//  * Definition for singly-linked list.
+//  * struct ListNode {
+//  *     int val;
+//  *     ListNode *next;
+//  *     ListNode() : val(0), next(nullptr) {}
+//  *     ListNode(int x) : val(x), next(nullptr) {}
+//  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+//  * };
+//  */
+
+// class Solution {
+// public:
+//     ListNode* swapPairs(ListNode* head) {
+//         // if(head==NULL || head->next==NULL) return head;
+//         // ListNode* temp =head;
+//         //  ListNode* prev =head;
+//         // ListNode* curr=head->next;
+//         // ListNode* forw=head->next;
+//         // while(temp!=NULL && forw!=NULL){
+//         //     temp->next=forw->next;
+//         //    // prev->next=forw;
+//         //     forw->next=temp;
+//         //     if(prev!=head){
+//         //     prev=temp;
+//         //     prev->next=forw;}
+//         //     temp=temp->next;
+//         //     if(temp!=NULL){
+//         //     forw=temp->next;}
+//         // }
+//         // head=curr;
+//         // return head;
+//         ListNode dummy(0);
+//         dummy.next=head;
+//         ListNode* prev= &dummy;
+//         while(prev->next && prev->next->next){
+//             ListNode* curr=prev->next;
+//             ListNode* forw= curr->next;
+
+//             curr->next=forw->next;
+//             forw->next= curr;
+//             prev->next=forw;
+//             prev=curr;
+//         }
+//         head=dummy.next;
+//         return head;
+//     }
+// };
+
+
+
+
+
+//Leetcode 21
+// 21. Merge Two Sorted Lists
+// Solved
+// Easy
+// Topics
+// premium lock icon
+// Companies
+// You are given the heads of two sorted linked lists list1 and list2.
+// Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+// Return the head of the merged linked list.
+// Example 1:
+// Input: list1 = [1,2,4], list2 = [1,3,4]
+// Output: [1,1,2,3,4,4]
+// Example 2:
+// Input: list1 = [], list2 = []
+// Output: []
+// Example 3:
+// Input: list1 = [], list2 = [0]
+// Output: [0]
+
+
+// class Solution {
+// public:
+//     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+//         ListNode* dummy= new ListNode(0);
+//         ListNode* temp=dummy;
+//         while(list1!=NULL && list2!=NULL){
+//             if(list1->val<list2->val){
+//                 temp->next = new ListNode(list1->val);
+//                 temp=temp->next;
+//                 list1=list1->next;
+// …        }
+//         while(list2!=NULL){
+//             temp->next = new ListNode(list2->val);
+//             temp=temp->next;
+//             list2=list2->next;
+//         }
+//         return dummy->next;
+//     }
+// };
