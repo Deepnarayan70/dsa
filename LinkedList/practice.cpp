@@ -379,3 +379,168 @@ using namespace std;
 //         return dummy->next;
 //     }
 // };
+
+
+//#Leetcode 148
+// 148. Sort List
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Given the head of a linked list, return the list after sorting it in ascending order.
+// Example 1:
+// Input: head = [4,2,1,3]
+// Output: [1,2,3,4]
+// Example 2:
+// Input: head = [-1,5,3,4,0]
+// Output: [-1,0,3,4,5]
+// Example 3:
+// Input: head = []
+// Output: []
+
+
+// class Solution {
+// public:
+//     ListNode* merge(ListNode* left, ListNode* right){
+//         ListNode* dummy= new ListNode(0);
+//         ListNode* temp=dummy;
+//         while(left!=NULL && right!=NULL){
+//             if(left->val<=right->val){
+//                 temp->next=left;
+//                 temp=temp->next;
+//                 left=left->next;
+//             }
+//             else{
+//                 temp->next=right;
+//                 temp=temp->next;
+//                 right=right->next;
+//             }
+//         }
+//         while(left!=NULL){
+//             temp->next=left;
+//             temp= temp->next;
+//             left=left->next;
+//         }
+//         while(right!=NULL){
+//             temp->next = right;
+//             temp = temp->next;
+//              right =right->next;
+//           }
+//           return dummy->next;
+//     }
+//     ListNode* sortList(ListNode* head) {
+//         if(head==NULL || head->next==NULL)return head;
+//             ListNode* slow=head; 
+//             ListNode* fast=head->next;
+//         while(fast!=NULL && fast->next!=NULL){
+//             slow=slow->next;
+//             fast=fast->next->next;
+//         }
+//         ListNode* right=slow->next;
+//         slow->next=NULL;
+//         ListNode* left=head;
+//         ListNode* sortedLeft = sortList(left);
+//         ListNode* sortedRigth = sortList(right);
+//         return  merge(sortedLeft, sortedRigth);
+ 
+//     }
+// };
+
+
+
+//Leetcode 328
+
+// Code
+// Testcase
+// Testcase
+// Test Result
+// 328. Odd Even Linked List
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
+// The first node is considered odd, and the second node is even, and so on.
+// Note that the relative order inside both the even and odd groups should remain as it was in the input.
+// You must solve the problem in O(1) extra space complexity and O(n) time complexity.
+// Example 1:
+// Input: head = [1,2,3,4,5]
+// Output: [1,3,5,2,4]
+// Example 2:
+// Input: head = [2,1,3,5,6,4,7]
+// Output: [2,3,6,7,1,5,4]
+
+
+// class Solution {
+// public:
+//     ListNode* oddEvenList(ListNode* head) {
+//         if(head==NULL)return head ;
+//         ListNode* odd = head;
+//         ListNode* even=head->next;
+//         ListNode* tempeven = even;
+//         while(even!=NULL && even->next!=NULL){
+//         odd->next=even->next;
+//         odd=odd->next;
+//         even->next=odd->next;
+//         even=even->next;
+//         }
+//         odd->next=tempeven;
+//         return head;
+//     }
+// };
+
+
+ //#Leetcode 25
+//  25. Reverse Nodes in k-Group
+// Solved
+// Hard
+// Topics
+// premium lock icon
+// Companies
+// Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.
+// k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.
+// You may not alter the values in the list's nodes, only nodes themselves may be changed.
+// Example 1:
+// Input: head = [1,2,3,4,5], k = 2
+// Output: [2,1,4,3,5]
+// Example 2:
+// Input: head = [1,2,3,4,5], k = 3
+// Output: [3,2,1,4,5]
+
+
+// class Solution {
+// public:
+//     int size(ListNode* head){
+//         ListNode* temp= head;
+//         int c=0;
+//         while(temp!=NULL){
+//             c++;
+//             temp=temp->next;
+//         }
+//         return c;
+//     }
+//     ListNode* reverseKGroup(ListNode* head, int k) {
+//         int n= size(head);
+//         if(head==NULL || k==1) return head;
+//         ListNode* dummy= new ListNode(0);
+//         dummy->next=head;
+//         ListNode* curr=dummy;
+//         ListNode* prev=dummy;
+//         ListNode* forw=dummy;
+//         while(n>=k){
+//             curr=prev->next;
+//             forw=curr->next;
+//             for(int i=1;i<k;i++){
+//                 curr->next=forw->next;
+//                 forw->next=prev->next;
+//                 prev->next= forw;
+//                 forw=curr->next;
+//             }
+//             prev=curr;
+//             n-=k;
+//         }
+//         return dummy->next;
+//     }
+// };
