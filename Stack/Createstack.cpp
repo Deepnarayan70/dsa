@@ -64,6 +64,9 @@
 // }
 
 
+
+
+
 // #GFG problem
 // Stock span problem
 // Difficulty: MediumAccuracy: 43.56%Submissions: 260K+Points: 4
@@ -109,3 +112,131 @@
 //         cout << x << " ";
 //     return 0;
 // }
+
+
+// #Leetcode problem 735
+// 735. Asteroid Collision
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Hint
+// We are given an array asteroids of integers representing asteroids in a row. The indices of the asteroid in the array represent their relative position in space.
+// For each asteroid, the absolute value represents its size, and the sign represents its direction (positive meaning right, negative meaning left). Each asteroid moves at the same speed.
+// Find out the state of the asteroids after all collisions. If two asteroids meet, the smaller one will explode. If both are the same size, both will explode. Two asteroids moving in the same direction will never meet.
+// Example 1:
+// Input: asteroids = [5,10,-5]
+// Output: [5,10]
+// Explanation: The 10 and -5 collide resulting in 10. The 5 and 10 never collide.
+// Example 2:
+// Input: asteroids = [8,-8]
+// Output: []
+// Explanation: The 8 and -8 collide exploding each other.
+// Example 3:
+// Input: asteroids = [10,2,-5]
+// Output: [10]
+// Explanation: The 2 and -5 collide resulting in -5. The 10 and -5 collide resulting in 10.
+// Example 4:
+// Input: asteroids = [3,5,-6,2,-1,4]​​​​​​​
+// Output: [-6,2,4]
+// Explanation: The asteroid -6 makes the asteroid 3 and 5 explode, and then continues going left. On the other side, the asteroid 2 makes the asteroid -1 explode and then continues going right, without reaching asteroid 4.
+
+// class Solution {
+// public:
+//     vector<int> asteroidCollision(vector<int>& asteroids) {
+//         stack<int> st;
+
+//             for (int val : asteroids) {
+//             bool destroyed = false;
+
+//             while (!st.empty() && st.top() > 0 && val < 0) {
+//                 if (abs(st.top()) < abs(val)) {
+//                     st.pop();              
+//                 }
+//                 else if (abs(st.top()) == abs(val)) {
+//                     st.pop();              
+//                     destroyed = true;
+//                     break;
+//                 }
+//                 else {
+//                     destroyed = true;     
+//                     break;
+//                 }
+//             }
+
+//             if (!destroyed) {
+//                 st.push(val);
+//             }
+//         }
+
+//         vector<int> ans(st.size());
+//         for (int i = ans.size() - 1; i >= 0; i--) {
+//             ans[i] = st.top();
+//             st.pop();
+//         }
+//         return ans;
+// }
+// };
+
+
+
+//Leetcode problem 678
+// 678. Valid Parenthesis String
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Hint
+// Given a string s containing only three types of characters: '(', ')' and '*', return true if s is valid.
+// The following rules define a valid string:
+// Any left parenthesis '(' must have a corresponding right parenthesis ')'.
+// Any right parenthesis ')' must have a corresponding left parenthesis '('.
+// Left parenthesis '(' must go before the corresponding right parenthesis ')'.
+// '*' could be treated as a single right parenthesis ')' or a single left parenthesis '(' or an empty string "".
+// Example 1:
+// Input: s = "()"
+// Output: true
+// Example 2:
+// Input: s = "(*)"
+// Output: true
+// Example 3:
+// Input: s = "(*))"
+// Output: true
+
+
+// class Solution {
+// public:
+//     bool checkValidString(string s) { 
+//         stack<int> st;
+//         stack<int> star;
+//         int count=0;
+//         for(int i=0;i<s.length();i++){
+//             char c = s[i];
+//             if(c=='('){
+//                 st.push(i);
+//             }
+//             else if(c == '*'){
+//                 star.push(i);
+//             }
+//             else{
+//                 if(!st.empty())st.pop();
+//                 else{
+//                     if(!star.empty())star.pop();
+//                     else{
+//                         return false;
+//                      }
+//             }
+//         }
+//         }
+//         while(!st.empty() && !star.empty()){
+//             if(st.top()>star.top())return false;
+//             else{
+//                 st.pop(); star.pop();
+//             }
+//      }
+//         return st.empty();
+//     }
+    
+// };
