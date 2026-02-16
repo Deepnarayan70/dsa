@@ -240,3 +240,151 @@
 //     }
     
 // };
+
+//############3# Leetcode problem 84 
+// 84. Largest Rectangle in Histogram
+// Solved
+// Hard
+// Topics
+// premium lock icon
+// Companies
+// Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+// Example 1:
+// Input: heights = [2,1,5,6,2,3]
+// Output: 10
+// Explanation: The above is a histogram where width of each bar is 1.
+// The largest rectangle is shown in the red area, which has an area = 10 units.
+// Example 2:
+// Input: heights = [2,4]
+// Output: 4
+
+// class Solution {
+// public:
+//     int largestRectangleArea(vector<int>& heights) {
+//         int n=heights.size();
+//         if(n==0) return 0;
+//         vector<int> l(n);
+//         vector<int> r(n);
+//         stack<int> check;
+//         for(int i=0;i<n;i++){
+//             while(!check.empty() && heights[i]<= heights[check.top()]){
+//                 check.pop();
+//             }
+//             if(check.empty()) {
+//                 l[i]= -1;
+//             } else{
+//                 l[i]= check.top();
+//             }
+//             check.push(i);
+//         }
+//       stack<int>check1;
+//         for(int i=n-1;i>=0;i--){
+//             while(!check1.empty() && heights[i]<= heights[check1.top()]){
+//                 check1.pop();
+//             }
+//             if(check1.empty()){
+//                 r[i]=n;
+//             } else{
+//                 r[i]=check1.top();
+//             }
+//             check1.push(i);
+//         }
+//         int ans= 0;
+//         for(int i=0;i<n;i++){
+//             int d= (r[i]-l[i]-1);
+//             ans= max(ans,d*heights[i]);
+//         }
+//         return ans;
+
+
+//     }
+// };
+
+
+//# Leetcode problem 456
+// 456. 132 Pattern
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Given an array of n integers nums, a 132 pattern is a subsequence of three integers nums[i], nums[j] and nums[k] such that i < j < k and nums[i] < nums[k] < nums[j].
+// Return true if there is a 132 pattern in nums, otherwise, return false.
+// Example 1:
+// Input: nums = [1,2,3,4]
+// Output: false
+// Explanation: There is no 132 pattern in the sequence.
+// Example 2:
+// Input: nums = [3,1,4,2]
+// Output: true
+// Explanation: There is a 132 pattern in the sequence: [1, 4, 2].
+// Example 3:
+// Input: nums = [-1,3,2,0]
+// Output: true
+// Explanation: There are three 132 patterns in the sequence: [-1, 3, 2], [-1, 3, 0] and [-1, 2, 0].
+
+
+// class Solution {
+//     public boolean find132pattern(int[] nums) {
+//         int n = nums.length;
+//         Stack<Integer> st = new Stack<>();
+//         int min = Integer.MIN_VALUE; 
+
+//         for (int i = n - 1; i >= 0; i--) {
+//             int x = nums[i];
+//             if (x < min) return true;
+
+//             while (!st.isEmpty() && st.peek() < x) {
+//                 min= st.peek();
+//                 st.pop();
+//             }
+//             st.push(x);
+//         }
+//         return false;
+//     }
+// }
+
+
+//#Leetcode problem 1190
+1190. Reverse Substrings Between Each Pair of Parentheses
+Solved
+Medium
+Topics
+premium lock icon
+Companies
+Hint
+You are given a string s that consists of lower case English letters and brackets.
+Reverse the strings in each pair of matching parentheses, starting from the innermost one.
+Your result should not contain any brackets.
+Example 1:
+Input: s = "(abcd)"
+Output: "dcba"
+Example 2:
+Input: s = "(u(love)i)"
+Output: "iloveu"
+Explanation: The substring "love" is reversed first, then the whole string is reversed.
+Example 3:
+Input: s = "(ed(et(oc))el)"
+Output: "leetcode"
+Explanation: First, we reverse the substring "oc", then "etco", and finally, the whole string.
+
+class Solution {
+public:
+    string reverseParentheses(string s) {
+        stack<string> st;
+        string curr="";
+        for(char c: s){
+            if(c=='('){
+                st.push(curr);
+                curr.clear();
+            } else if(c==')'){
+                reverse(curr.begin(),curr.end());
+                curr = st.top() + curr;
+                st.pop();
+            } else {
+                curr.push_back(c);
+            }
+        }
+        return curr;
+    }
+};
