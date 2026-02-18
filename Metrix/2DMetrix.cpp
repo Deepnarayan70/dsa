@@ -62,6 +62,7 @@
 // }
 
 
+
 // //problem- calculate border sum
 // int matrixBorderSum(vector<vector<int>>& grid) {
 
@@ -75,7 +76,7 @@
 
 //     if (r == 1) {
 //         for (int i = 0; i < c; i++) {
-//             sum += grid[0][i];   // ✅ fixed
+//             sum += grid[0][i];   //  
 //         }
 //         return sum;
 //     }
