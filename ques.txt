@@ -1,0 +1,18 @@
+3507. Minimum Pair Removal to Sort Array I- https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i/description/?envType=daily-question&envId=2026-01-22
+239. Sliding Window Maximum - https://leetcode.com/problems/sliding-window-maximum/description/
+76. Minimum Window Substring - https://leetcode.com/problems/minimum-window-substring/description/
+152. Maximum Product Subarray - https://leetcode.com/problems/maximum-product-subarray/description/
+400. Nth Digit - https://leetcode.com/problems/nth-digit/description/
+378. Kth Smallest Element in a Sorted Matrix - https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
+3729. Count Distinct Subarrays Divisible by K in Sorted Array - https://leetcode.com/problems/count-distinct-subarrays-divisible-by-k-in-sorted-array/description/
+138. Copy List with Random Pointer - https://leetcode.com/problems/copy-list-with-random-pointer/description/
+146. LRU Cache- https://leetcode.com/problems/lru-cache/description/
+901. Online Stock Span - https://leetcode.com/problems/online-stock-span/description/
+907. Sum of Subarray Minimums- https://leetcode.com/problems/sum-of-subarray-minimums/description/
+56. Merge Intervals- https://leetcode.com/problems/merge-intervals/description/
+387. First Unique Character in a String- https://leetcode.com/problems/first-unique-character-in-a-string/description/
+918. Maximum Sum Circular Subarray - https://leetcode.com/problems/maximum-sum-circular-subarray/description/
+752. Open the Lock - https://leetcode.com/problems/open-the-lock/description/
+433. Minimum Genetic Mutation - https://leetcode.com/problems/minimum-genetic-mutation/description/
+
+2385 - DFS,BFS
