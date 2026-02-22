@@ -25,6 +25,8 @@ public class findinRotatedArray {
         }
         return -1;
     }
+
+    
    public void main(String[] st){
     Scanner sc = new Scanner(System.in);
     int n=sc.nextInt();
