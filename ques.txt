@@ -17,3 +17,10 @@
 
 
 2385 - DFS,BFS
+979. Distribute Coins in Binary Tree-https://leetcode.com/problems/distribute-coins-in-binary-tree/description/
+543. Diameter of Binary Tree-https://leetcode.com/problems/diameter-of-binary-tree/description/
+662. Maximum Width of Binary Tree-https://leetcode.com/problems/maximum-width-of-binary-tree/description/
+863. All Nodes Distance K in Binary Tree-https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/description/
+1292. Maximum Side Length of a Square with Sum Less than or Equal to Threshold- https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/description/
+337. House Robber III-https://leetcode.com/problems/house-robber-iii/description/
+235. Lowest Common Ancestor of a Binary Search Tree- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
