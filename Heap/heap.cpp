@@ -63,6 +63,13 @@ class heap{
     int size(){
         return arr.size();
     }
+    void printheap(){
+        for(int i=0;i<arr.size();i++){
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    }
+    
 
 
 };
@@ -81,5 +88,6 @@ int main(){
     h.push(5);
     h.push(1);
     cout<<h.top()<<endl;
+    
     
 }
