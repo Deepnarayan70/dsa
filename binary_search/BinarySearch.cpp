@@ -1,5 +1,4 @@
-
-//#Binary Search
+ //#Binary Search
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -12,7 +11,7 @@ int printFirstposition(vector<int> arr, int target){
         int mid= l+(h-l)/2;
         if(arr[mid]==target) {
             pos= mid;
-             h=mid-1;}
+            h=mid-1;}
         else if (arr[mid]>target){
             h=mid-1;
         } else {
